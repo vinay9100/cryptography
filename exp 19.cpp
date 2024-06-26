@@ -28,3 +28,8 @@ print("Encrypted:", encrypted.hex())
 print("Decrypted:", decrypted)
 if _name== "__main_":
 main()
+
+  OUTPUT:
+Plaintext:helloworld!
+plaintext:13
+encrypted text:2e349F8ba997e5a31d648F16c14c271
