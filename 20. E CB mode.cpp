@@ -41,3 +41,6 @@ int main() {
     printf("Decrypted Result (CBC with Error): %s\n", encrypted_cbc);
     return 0;
 }
+OUTPUT:
+Corrected ciphertext in ECB Mode:cuseewert
+propagated ciphertext in CBC Mode:ertywtus
