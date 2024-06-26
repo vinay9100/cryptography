@@ -58,3 +58,15 @@ int main() {
     printf("Encrypted Message: %s\n", encryptedMessage);
     return 0;
 }
+
+
+OUTPUT:
+Enter the key word:Network
+matrix:
+NETWO
+RKABC
+DFGHI
+IMPQS
+UVXYZ
+ENTER THE PLAIN TEXT:hello
+ciphertext:fwmme
