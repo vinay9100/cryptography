@@ -28,11 +28,11 @@ void decrypt(char *ciphertext) {
             decrypted[i] = 'i';
         } else if (ciphertext[i] == '2') {
             decrypted[i] = 'j';
-        } else if (ciphertext[i] == '‡') {
+        } else if (ciphertext[i] == 'â€¡') {
             decrypted[i] = 'k';
-        } else if (ciphertext[i] == '†') {
+        } else if (ciphertext[i] == 'â€ ') {
             decrypted[i] = 'l';
-        } else if (ciphertext[i] == '¶') {
+        } else if (ciphertext[i] == 'Â¶') {
             decrypted[i] = 'm';
         } else if (ciphertext[i] == ']') {
             decrypted[i] = 'n';
@@ -56,7 +56,7 @@ void decrypt(char *ciphertext) {
             decrypted[i] = 'w';
         } else if (ciphertext[i] == '-') {
             decrypted[i] = 'x';
-        } else if (ciphertext[i] == '—') {
+        } else if (ciphertext[i] == 'â€”') {
             decrypted[i] = 'y';
         } else if (ciphertext[i] == ':') {
             decrypted[i] = 'z';
@@ -70,8 +70,11 @@ void decrypt(char *ciphertext) {
 }
 
 int main() {
-    char ciphertext[] = "53‡‡†305))6*;4826)4‡.)4‡);806*;48†8¶60))85;;]8*;:‡*8†83(88)5*†;46(;88*96*?;8)*‡(;485);5*†2:*‡(;4956*2(5*—4)8¶8*;4069285);)6†8)4‡‡;1(‡9;48081;8:8‡1;48†85;4)485†528806*81(‡9;48;(88;4(‡?34;48)4‡;161;:188;‡?;";
+    char ciphertext[] = "53â€¡â€¡â€ 305))6*;4826)4â€¡.)4â€¡);806*;48â€ 8Â¶60))85;;]8*;:â€¡*8â€ 83(88)5*â€ ;46(;88*96*?;8)*â€¡(;485);5*â€ 2:*â€¡(;4956*2(5*â€”4)8Â¶8*;4069285);)6â€ 8)4â€¡â€¡;1(â€¡9;48081;8:8â€¡1;48â€ 85;4)485â€ 528806*81(â€¡9;48;(88;4(â€¡?34;48)4â€¡;161;:188;â€¡?;";
     decrypt(ciphertext);
     return 0;
 }
-
+OUTPUT:
+53â€¡â€¡â€ 305))6*;4826)4â€¡.)4â€¡);806*;48â€ 8Â¶60))85;;]8*;:â€¡*8â€ 83 
+(88)5*â€ ;46(;88*96*?;8)*â€¡(;485);5*â€ 2:*â€¡(;4956*2(5*â€”4)8Â¶8* 
+;4069285);)6â€ 8)4â€¡â€¡;1(â€¡9;48081;8:8â€¡1;48â€ 85;4)485â€ 528806*81 (â€¡9;48;(88;4(â€¡?34;48)4â€¡;161;:188;â€¡?; 
