@@ -30,3 +30,9 @@ printf("K%d: 0x%012llX\n", i + 1, subkeys[i]);
 }   
 return 0;
 } 
+OUTPUT:
+Enter initial key(56 bit hexadecimal=
+shift k1:ace000000
+shift k2:2b3800000
+shift k3:5670000000
+shift k4:159c000000
