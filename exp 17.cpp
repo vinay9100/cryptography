@@ -29,3 +29,7 @@ printf("Decrypted: 0x%016llX\n", decrypted);
 
 return 0;
 }
+OUTPUT:
+Round key1:3*%5126
+Round key2:3*%5126
+Roundkey3:3*%5126
