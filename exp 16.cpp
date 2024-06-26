@@ -45,3 +45,30 @@ int main()
     letterFrequencyAttack(cipherText, topPlaintexts);
 	return 0;
 }
+OUUTPUT:
+a:0
+b:0
+C:0
+d:0
+e:0
+f:0
+g:1
+h:1
+i:0
+j:0
+k:1
+l:0
+m:0
+n:0
+o:0
+p:0
+q:0
+r:2
+s:0
+t:0
+u:1
+v:0
+w:0
+x:0
+y:0
+z:1
