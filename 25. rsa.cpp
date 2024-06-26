@@ -26,3 +26,6 @@ int main() {
 
     return 0;
 }
+OUTPUT:
+ENCRPTION:2
+DECRYPTION:3
