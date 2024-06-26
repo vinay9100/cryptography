@@ -82,4 +82,7 @@ int main() {
 
     return 0;
 }
+OUTPUT:
+Enter the cipher text:cryptography
+Decrypted text:nahagftqxaoh
 
