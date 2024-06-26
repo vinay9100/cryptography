@@ -87,3 +87,8 @@ void encrypt_cfb(const unsigned char *plaintext, int plaintext_len, unsigned cha
     DES_key_schedule ks;
     DES_set_key((const_DES_cblock *)key, &ks);
     DES_cfb_encrypt(plaintext,
+
+OUTPUT:
+ORIGINAL PLAINTEXT:0000000100100110
+ENCRYPTED TEXT:919384060167706232762420307200042030720800000
+DECRYPTED TEXT:304223016042230400601745992327622000101131202685010090
