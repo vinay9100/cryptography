@@ -24,3 +24,8 @@ int main() {
     printf("Encrypted text: %s\n", plaintext);
     return 0;
 }
+
+OUTPUT:
+enter the plaintext:crptography
+enter the key:rare
+ciphertext:trptkoxvrpp
