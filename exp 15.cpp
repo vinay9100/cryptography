@@ -52,4 +52,8 @@ int main() {
 
     return 0;
 }
-
+output:
+enter:give me the top 10 plaintexts
+1.crptography
+2.compiler
+3.networks..
