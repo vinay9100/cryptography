@@ -26,4 +26,7 @@ int main() {
 
     return 0;
 }
-
+OUTPUT:
+RECOVERED KEY:
+25 22
+24 -14
