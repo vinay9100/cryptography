@@ -1,0 +1,174 @@
+Caesar cipher
+
+#include <stdio.h>
+
+int main() {
+    char text[] = "HELLO WORLD";
+    int k = 3;  // Shift amount (change k to any value between 1 and 25)
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (text[i] >= 'A' && text[i] <= 'Z')
+            text[i] = 'A' + (text[i] - 'A' + k) % 26;
+        else if (text[i] >= 'a' && text[i] <= 'z')
+            text[i] = 'a' + (text[i] - 'a' + k) % 26;
+    }
+    printf("Encrypted text: %s\n", text);
+    return 0;
+}
+
+
+mono
+#include <stdio.h>
+
+int main() {
+    char plaintext[] = "XIBA";
+    char key[] = "KEYWORDABCFGHIJLMNPQSTUVXZ";  // Key for substitution
+    for (int i = 0; plaintext[i] != '\0'; i++) {
+        if (plaintext[i] >= 'A' && plaintext[i] <= 'Z')
+            plaintext[i] = key[plaintext[i] - 'A'];
+    }
+    printf("Encrypted text: %s\n", plaintext);
+    return 0;
+}
+
+affine
+
+#include<stdio.h>
+int main()
+{
+	int a=3;
+	int b=5;
+	if(a%2==0&& a%13==0)
+	{
+		printf("a is not coprime");
+		return 1;
+	}
+	int p=10;
+	int C=((a*p)+b)%26;
+	printf("%c",'A'+ C);
+	return 0;
+}
+
+rsa
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int p=3,q=5;
+	int n=p*q;
+	int k=(p-1)*(q-1);
+	int e=3,d=3;
+
+	int m=2;
+    int p1=pow(m,e);
+	int C=p1%q;
+	int p2=pow(C,d);
+	int M = p2%q;
+	printf("encryption:%d",C);
+	printf("deryption:%d",M);
+	return 0;
+}
+
+DIFFIE
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int q,x,XA,XB,YA,YB,KA,KB,P1,P2,K1,K2;
+	q=3;
+	x=5;
+	XA=3,XB=5;
+	P1=pow(x,XA);
+	YA=P1%q;
+	P2=pow(x,XB);
+	YB=P2%q;
+	K1=pow(YB,XA);
+	K2=pow(YA,XB);
+	KA=K1%q;
+	KB=K2%q;
+	printf("%d\n",KA);
+	printf("%d\n",KB);
+	if(KA=KB){
+		printf("key is exchanged");
+	}
+	return 0;
+}
+
+poly alpha
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void vigenercipher(char *pt,char *k)
+{
+	int tl=strlen(pt);
+	int kl=strlen(k);
+	for(int i=0;i<tl;i++)
+	{
+		if(isalpha(pt[i]))
+		{
+		char base=isupper(pt[i])?'A':'a';
+		int keyindx=i%kl;
+		int shift=tolower(k[keyindx])-'a';
+		pt[i]=(pt[i]-base+shift)%26+base;
+		}
+	}
+}
+int main()
+{
+	char pt[1000];
+	char k[1000];
+	printf("enter pt:");
+	scanf("%s",pt);
+	printf("enter key:");
+	scanf("%s",k);
+	vigenercipher(pt,k);
+	printf("Cipher Text:%s",pt);
+	return 0;
+}
+
+Des
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char key = 0x3A;  // Simplified key
+    char msg[] = "HELLO";
+    char enc[6];
+    for (int i = 0; i < strlen(msg); i++) enc[i] = msg[i] ^ key;  // Simple XOR encryption
+    enc[5] = '\0';
+    printf("Encrypted Message: %s\n", enc);
+    for (int i = 0; i < strlen(enc); i++) enc[i] = enc[i] ^ key;  // Decrypt the message
+    printf("Decrypted Message: %s\n", enc);
+    return 0;
+}
+
+SHA
+
+#include <openssl/sha.h>
+#include <stdio.h>
+int main() {
+    unsigned char hash[SHA256_DIGEST_LENGTH];
+    char str[] = "hello";
+    SHA256((unsigned char*)str, strlen(str), hash);
+    printf("SHA-256: ");
+    for(int i = 0; i < SHA256_DIGEST_LENGTH; i++) printf("%02x", hash[i]);
+    printf("\n");
+    return 0;
+}
+
+
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char key = 0x3A;  // Simplified key
+    char msg[] = "HELLO";
+    char enc[6];
+    for (int i = 0; i < strlen(msg); i++) enc[i] = msg[i] ^ key;  // Simple XOR encryption
+    enc[5] = '\0';
+    printf("Encrypted Message: %s\n", enc);
+    for (int i = 0; i < strlen(enc); i++) enc[i] = enc[i] ^ key;  // Decrypt the message
+    printf("Decrypted Message: %s\n", enc);
+    return 0;
+}
+
